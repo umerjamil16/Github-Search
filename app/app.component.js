@@ -17,8 +17,9 @@ var AppComponent = (function () {
     }
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1><profile></profile>',
+            templateUrl: 'app.component.html',
             directives: [profile_component_1.ProfileComponent],
             providers: [http_1.HTTP_PROVIDERS, github_service_1.GithubService]
         }), 

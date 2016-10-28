@@ -15,7 +15,7 @@ var GithubService = (function () {
     function GithubService(_http) {
         this._http = _http;
         console.log('Github Service Ready...');
-        this.username = 'bradtraversy';
+        this.username = 'umerjamil16';
     }
     GithubService.prototype.getUser = function () {
         return this._http.get('http://api.github.com/users/' + this.username)

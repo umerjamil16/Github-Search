@@ -8,7 +8,7 @@ export class GithubService{
     
     constructor(private _http:Http){
         console.log('Github Service Ready...');
-        this.username = 'bradtraversy';
+        this.username = 'umerjamil16';
     }
     
     getUser(){
