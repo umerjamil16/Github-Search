@@ -19,13 +19,21 @@ var ProfileComponent = (function () {
         this.repos = [];
         this._githubService.getUser().subscribe(function (user) {
             //            console.log(user);
+            _this.user = false;
+        });
+    }
+    ProfileComponent.prototype.searchUser = function () {
+        var _this = this;
+        this._githubService.updateUser(this.username);
+        this._githubService.getUser().subscribe(function (user) {
+            //            console.log(user);
             _this.user = user;
         });
         this._githubService.getRepos().subscribe(function (repos) {
             //            console.log(user);
             _this.repos = repos;
         });
-    }
+    };
     ProfileComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

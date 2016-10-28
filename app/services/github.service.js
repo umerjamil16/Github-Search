@@ -25,6 +25,9 @@ var GithubService = (function () {
         return this._http.get('http://api.github.com/users/' + this.username + "/repos")
             .map(function (res) { return res.json(); });
     };
+    GithubService.prototype.updateUser = function (username) {
+        this.username = username;
+    };
     GithubService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
